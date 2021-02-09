@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\CovenantController;
 use App\Http\Controllers\Api\InstitutionController;
+use App\Http\Controllers\Api\SimulatorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,5 @@ Route::group([
 ], function ($router) {
     Route::get('/covenants', [CovenantController::class, 'getCovenants']);    
     Route::get('/institutions', [InstitutionController::class, 'getInstitutions']);    
+    Route::post('/simulate', [SimulatorController::class, 'simulateLoan']);    
 });
